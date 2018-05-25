@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="60dp">
+
+    <LinearLayout
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_reflec" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:text="@string/machine_ddr" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:text="@string/machine_gitadora" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_museca" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_newtaiko" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_pumpitup" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_pop_n" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:text="@string/machine_nostalgia" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="20dp"
+            android:text="@string/machine_ez2ac" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_drummania" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_maimai" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_search_btn"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/machine_groovecoaster" />
+
+    </LinearLayout>
+</RelativeLayout>

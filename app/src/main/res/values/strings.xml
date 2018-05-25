@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">GameCenterFinder</string>
+    <string name="navigation_drawer_open">Open navi drawer</string>
+    <string name="navigation_drawer_close">Close navi drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 게임기-->
+    <string name="machine_reflec">리플렉</string>
+    <string name="machine_pop_n">팝픈뮤직</string>
+    <string name="machine_ddr">DDR</string>
+    <string name="machine_nostalgia">노스텔지어</string>
+    <string name="machine_gitadora">GITADORA</string>
+    <string name="machine_ez2ac">EZ2AC</string>
+    <string name="machine_museca">MÚSECA</string>
+    <string name="machine_drummania">드럼매니아</string>
+    <string name="machine_newtaiko">신 태고</string>
+    <string name="machine_maimai">마이마이</string>
+    <string name="machine_pumpitup">펌프 잇 업</string>
+    <string name="machine_groovecoaster">그루브 코스터</string>
 </resources>
