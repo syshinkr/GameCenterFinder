@@ -6,39 +6,59 @@
     android:orientation="vertical"
     tools:context=".Fragment.DetailFragment">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/bottomSheetDialog_textview_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="센터명"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/bottomSheetDialog_textview_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="주소"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
-        <TextView
-            android:id="@+id/bottomSheetDialog_textview_opening"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="영업 시간"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/bottomSheetDialog_textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="센터명"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginEnd="70dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bottomSheetDialog_textview_address"
+                android:layout_marginEnd="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginEnd="70dp"
+                android:id="@+id/bottomSheetDialog_textview_opening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영업 시간"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bottomSheetDialog_imagebutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/placeholder_filled_point"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp" />
+    </RelativeLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/bottomSheetDialog_recyclerview"

@@ -1,19 +1,19 @@
 package com.project.admin.gamecenterfinder.Fragment;
 
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.project.admin.gamecenterfinder.Model.GCListModel;
 import com.project.admin.gamecenterfinder.Model.GamesModel;
@@ -34,8 +34,12 @@ public class DetailFragment extends BottomSheetDialogFragment {
     private static final String ARG_ADDRESS = "address";
     private static final String ARG_OPENING = "opening";
     private static final String ARG_ID = "id";
+    private static final String ARG_LATITUDE = "latitude"; //위도
+    private static final String ARG_LONGITUDE = "longitude"; //경도
 
     private GCListModel centerModel = new GCListModel();
+    private String latitude;
+    private String longitude;
 
     public DetailFragment() {
         // Required empty public constructor
@@ -48,6 +52,9 @@ public class DetailFragment extends BottomSheetDialogFragment {
         args.putString(ARG_ADDRESS, gcListModel.address);
         args.putString(ARG_OPENING, gcListModel.opening);
         args.putString(ARG_ID, gcListModel.id);
+
+        args.putString(ARG_LATITUDE, gcListModel.location.get(0).toString());
+        args.putString(ARG_LONGITUDE, gcListModel.location.get(1).toString());
         fragment.setArguments(args);
         return fragment;
     }
@@ -60,6 +67,9 @@ public class DetailFragment extends BottomSheetDialogFragment {
             centerModel.address = getArguments().getString(ARG_ADDRESS);
             centerModel.opening = getArguments().getString(ARG_OPENING);
             centerModel.id = getArguments().getString(ARG_ID);
+            latitude = getArguments().getString(ARG_LONGITUDE);
+            longitude = getArguments().getString(ARG_LATITUDE);
+
         }
     }
 
@@ -78,6 +88,15 @@ public class DetailFragment extends BottomSheetDialogFragment {
         textView_name.setText(centerModel.name);
         textView_address.setText(centerModel.address);
         textView_opening.setText(centerModel.opening);
+
+        ImageButton imageButton = view.findViewById(R.id.bottomSheetDialog_imagebutton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //url 스키마 추가 요망
+//                Intent intent = new Intent(Intent.ACTION_VIEW, );
+            }
+        });
 
         return view;
     }

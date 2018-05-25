@@ -1,13 +1,16 @@
 package com.project.admin.gamecenterfinder.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -141,11 +144,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.navigation_setting:
                 break;
             case R.id.navigation_info:
+                showDialog();
                 break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("정보");
+
+        String msg = "나무위키 수정하면 좀 더 정확한 정보를 얻으실 수 있습니다. - 리갤 흥해라";
+        builder.setMessage(msg).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        }).setNegativeButton("나무위키", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://namu.wiki/w/%ED%85%9C%ED%94%8C%EB%A6%BF:%EC%98%A4%EB%9D%BD%EC%8B%A4")));
+            }
+        });
+        builder.create().show();
     }
 
     @Override
